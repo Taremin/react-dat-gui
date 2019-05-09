@@ -23,7 +23,7 @@ const config = {
     path: __dirname + '/build',
     filename: '[name]',
     library: 'Dat',
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs2',
     umdNamedDefine: true
   },
   module: {
