@@ -1,14 +1,5 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("prop-types"), require("react-dom"));
-	else if(typeof define === 'function' && define.amd)
-		define("Dat", ["react", "prop-types", "react-dom"], factory);
-	else if(typeof exports === 'object')
-		exports["Dat"] = factory(require("react"), require("prop-types"), require("react-dom"));
-	else
-		root["Dat"] = factory(root["React"], root["PropTypes"], root["ReactDOM"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_228__) {
-return /******/ (function(modules) { // webpackBootstrap
+module.exports =
+/******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -80,7 +71,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ (function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
+module.exports = require("react");
 
 /***/ }),
 /* 1 */
@@ -118,7 +109,7 @@ module.exports = isArray;
 /* 2 */
 /***/ (function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
+module.exports = require("prop-types");
 
 /***/ }),
 /* 3 */
@@ -6573,6 +6564,7 @@ var DatSelect = function (_Component) {
       var _props = this.props,
           path = _props.path,
           label = _props.label,
+          isIndex = _props.isIndex,
           labelWidth = _props.labelWidth;
       var _state = this.state,
           value = _state.value,
@@ -6601,7 +6593,7 @@ var DatSelect = function (_Component) {
             options.map(function (item, index) {
               return _react2.default.createElement(
                 'option',
-                { key: index, value: item },
+                { key: index, value: isIndex ? index : item },
                 item
               );
             })
@@ -6618,6 +6610,7 @@ DatSelect.propTypes = {
   data: _propTypes2.default.object,
   path: _propTypes2.default.string,
   label: _propTypes2.default.string,
+  isIndex: _propTypes2.default.bool,
   options: _propTypes2.default.array.isRequired,
   labelWidth: _propTypes2.default.number,
   liveUpdate: _propTypes2.default.bool,
@@ -15220,7 +15213,7 @@ else {
 /* 228 */
 /***/ (function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_228__;
+module.exports = require("react-dom");
 
 /***/ }),
 /* 229 */
@@ -15428,5 +15421,4 @@ exports.default = DatGui;
 
 /***/ })
 /******/ ]);
-});
 //# sourceMappingURL=react-dat-gui.js.map
