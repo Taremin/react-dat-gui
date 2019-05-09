@@ -64,6 +64,7 @@ export interface DatNumberProps extends DatChangableFieldProps {
 export class DatNumber extends React.Component<DatNumberProps, any> { }
 
 export interface DatSelectProps extends DatChangableFieldProps {
+    isIndex?: boolean;
     options: any[];
 }
 
